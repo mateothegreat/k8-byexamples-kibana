@@ -12,11 +12,6 @@ SERVICE_NAME    ?= kubernetes-dashboard
 SERVICE_PORT    ?= 80
 export
 
-# COLORS
-GREEN  		:= $(shell tput -Txterm setaf 2)
-YELLOW 		:= $(shell tput -Txterm setaf 3)
-WHITE  		:= $(shell tput -Txterm setaf 7)
-RESET  		:= $(shell tput -Txterm sgr0)
 
 all:        help
 ## Installs everything, first deleting
@@ -65,6 +60,12 @@ service-delete:
 
 	envsubst < service.yaml | kubectl --ignore-not-found --namespace $(NS) delete -f -
 
+
+# Help Outputs
+GREEN  		:= $(shell tput -Txterm setaf 2)
+YELLOW 		:= $(shell tput -Txterm setaf 3)
+WHITE  		:= $(shell tput -Txterm setaf 7)
+RESET  		:= $(shell tput -Txterm sgr0)
 help:
 
 	@echo "Deploy & Manage Kibana in Kubernetes."
