@@ -19,7 +19,9 @@ spec:
         image: docker.elastic.co/kibana/kibana-oss:6.1.3
         env:
         - name: CLUSTER_NAME
-          value: myesdb
+          value: $CLUSTER_NAME
+        - name: SERVER_BASEPATH
+          value: $SERVER_BASEPATH
         resources:
           limits:
             cpu: 1000m

@@ -7,9 +7,11 @@
 #
 
 # Environment Variables
-NS              ?= es
-SERVICE_NAME    ?= kubernetes-dashboard
-SERVICE_PORT    ?= 80
+NS                  ?= es
+SERVICE_NAME        ?= kibana
+SERVICE_PORT        ?= 80
+SERVER_BASE_PATH    ?= /
+CLUSTER_NAME        ?= myesdb
 export
 
 
