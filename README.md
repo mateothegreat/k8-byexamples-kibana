@@ -31,7 +31,6 @@ Usage:
 Targets:
 
   install              Installs everything, first deleting
-  reinstall            Deletes and then installs everything
   delete               Deletes everything
 
   get                  Retrieve Kubernetes Resources (kubectl get ..)
@@ -42,6 +41,17 @@ Targets:
 
   service-install      Install service
   service-delete       Delete service
+
+yomateod@proliant:/mnt/c/workspace/k8/cluster-2/modules/k8-byexamples-kibana$ make install
+
+[ INSTALLING MANIFESTS/DEPLOYMENT.YAML ]: deployment "kibana" configured
+[ INSTALLING MANIFESTS/SERVICE.YAML ]: service "kibana" unchanged
+
+yomateod@proliant:/mnt/c/workspace/k8/cluster-2/modules/k8-byexamples-kibana$ make delete
+
+[ DELETING MANIFESTS/DEPLOYMENT.YAML ]: deployment "kibana" deleted
+[ DELETING MANIFESTS/SERVICE.YAML ]: service "kibana" deleted
+
 ```
 
 ## Get resources
