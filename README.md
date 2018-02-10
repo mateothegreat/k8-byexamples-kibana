@@ -60,3 +60,7 @@ svc/kibana   ClusterIP   10.15.241.111   <none>        5601/TCP   56m       comp
 NAME                         READY     STATUS    RESTARTS   AGE       IP           NODE
 po/kibana-7696fbddfc-m2762   1/1       Running   0          56m       10.12.1.29   gke-cluster-2-default-pool-25ca6a7e-w6pv
 ```
+
+## See also
+
+* https://github.com/mateothegreat/k8-byexamples-elasticsearch-cluster
