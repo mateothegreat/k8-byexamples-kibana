@@ -15,10 +15,11 @@ SERVER_BASE_PATH    ?= /
 CLUSTER_NAME        ?= myesdb
 export
 
-## Find first pod and follow log output
-logs:
+## Test installation
+test:
 
-	@$(eval POD:=$(shell kubectl get pods --namespace $(NS) -lcomponent=kibana -o jsonpath='{.items[0].metadata.name}'))
-	echo $(POD)
+	@echo "$(GREEN)"
 
-	kubectl --namespace $(NS) logs -f $(POD)
+	nslookup kibana
+
+	@echo "$(RESET)"
