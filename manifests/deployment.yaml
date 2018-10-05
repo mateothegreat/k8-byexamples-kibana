@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: kibana
-        image: docker.elastic.co/kibana/kibana-oss:6.1.3
+        image: docker.elastic.co/kibana/kibana-oss:6.4.2
         env:
         - name: CLUSTER_NAME
           value: $CLUSTER_NAME
