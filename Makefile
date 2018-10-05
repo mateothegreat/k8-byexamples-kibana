@@ -12,14 +12,4 @@ NS                  ?= es
 SERVICE_NAME        ?= kibana
 SERVICE_PORT        ?= 80
 SERVER_BASE_PATH    ?= /
-CLUSTER_NAME        ?= myesdb
-export
-
-## Test installation
-test:
-
-	@echo "$(GREEN)"
-
-	nslookup kibana
-
-	@echo "$(RESET)"
+CLUSTER_NAME        ?= cluster
