@@ -8,7 +8,7 @@
 include .make/Makefile.inc
 
 # Environment Variables
-NS                  ?= es
+NS                  ?= default
 SERVICE_NAME        ?= kibana
 SERVICE_PORT        ?= 80
 SERVER_BASE_PATH    ?= /
