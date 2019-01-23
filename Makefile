@@ -13,3 +13,4 @@ SERVICE_NAME        ?= kibana
 SERVICE_PORT        ?= 80
 SERVER_BASE_PATH    ?= /
 CLUSTER_NAME        ?= cluster
+SERVER_NAME			?=
