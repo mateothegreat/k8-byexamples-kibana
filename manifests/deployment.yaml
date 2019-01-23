@@ -8,25 +8,25 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-     component: kibana
+      component: kibana
   template:
     metadata:
       labels:
         component: kibana
     spec:
       containers:
-      - name: kibana
-        image: docker.elastic.co/kibana/kibana-oss:6.4.2
-        env:
-        - name: CLUSTER_NAME
-          value: $CLUSTER_NAME
-        - name: SERVER_BASEPATH
-          value: $SERVER_BASEPATH
-        resources:
-          limits:
-            cpu: 1000m
-          requests:
-            cpu: 100m
-        ports:
-        - containerPort: 5601
-          name: http
+        - name: kibana
+          image: docker.elastic.co/kibana/kibana:6.5.4
+          env:
+            - name: CLUSTER_NAME
+              value: $CLUSTER_NAME
+            - name: SERVER_BASEPATH
+              value: $SERVER_BASEPATH
+          resources:
+            limits:
+              cpu: 1000m
+            requests:
+              cpu: 100m
+          ports:
+            - containerPort: 5601
+              name: http
