@@ -7,10 +7,10 @@
 #
 include .make/Makefile.inc
 
-# Environment Variables
-NS                  ?= default
-SERVICE_NAME        ?= kibana
-SERVICE_PORT        ?= 80
-SERVER_BASE_PATH    ?= /
-CLUSTER_NAME        ?= cluster
-SERVER_NAME			?=
+NS                      ?= default
+SERVICE_NAME            ?= kibana
+SERVICE_PORT            ?= 80
+SERVER_BASE_PATH        ?= /
+CLUSTER_NAME            ?= cluster
+SERVER_NAME			    ?=
+ELASTICSEARCH_VERSION   ?= 7.5.2

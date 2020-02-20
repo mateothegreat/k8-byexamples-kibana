@@ -14,9 +14,11 @@ spec:
       labels:
         component: kibana
     spec:
+#      nodeSelector:
+#        role: monitoring
       containers:
         - name: kibana
-          image: docker.elastic.co/kibana/kibana:7.0.1
+          image: docker.elastic.co/kibana/kibana:$ELASTICSEARCH_VERSION
           env:
             - name: CLUSTER_NAME
               value: $CLUSTER_NAME
